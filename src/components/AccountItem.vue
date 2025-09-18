@@ -82,7 +82,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, nextTick } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 import { AccountType } from '@/types/account';
 import type { Account, AccountFormData } from '@/types/account';
 

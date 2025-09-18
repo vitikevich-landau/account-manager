@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 import { useAccountStore } from '@/stores/accountStore';
 import AccountItem from './AccountItem.vue';
 import type { Account } from '@/types/account';
