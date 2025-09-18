@@ -1,29 +1,46 @@
-# account-manager
+# Account Manager
 
-This template should help get you started developing with Vue 3 in Vite.
+Форма управления учетными записями на Vue 3 + TypeScript
 
-## Recommended IDE Setup
+## Стек
+- Vue 3 (Composition API)
+- TypeScript
+- Pinia
+- Bootstrap 5
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## Установка
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Функционал
+- Добавление/удаление учетных записей
+- Два типа: Локальная и LDAP
+- Валидация при потере фокуса
+- Сохранение в LocalStorage
+- Метки через разделитель `;`
 
-```sh
+## Особенности
+- При выборе LDAP поле пароля скрывается
+- Поле логин растягивается на место пароля для LDAP
+- Метки преобразуются в массив объектов `{text: string}[]`
+- Максимальная длина: метки - 50, логин/пароль - 100 символов
+
+## Структура
+```
+src/
+├── components/
+│   ├── AccountForm.vue    # Основная форма
+│   └── AccountItem.vue    # Элемент списка
+├── stores/
+│   └── accountStore.ts    # Хранилище Pinia
+├── types/
+│   └── account.ts         # TypeScript типы
+└── main.ts
+```
+
+## Сборка
+```bash
 npm run build
 ```
